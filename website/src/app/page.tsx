@@ -106,11 +106,20 @@ export default async function Home() {
             return (
               <li
                 key={item.id}
-                className="rounded-md bg-[#76aadb]/90 hover:bg-[#76aadb]/80 cursor-pointer p-4 w-60 flex flex-col items-center gap-3"
+                style={{
+                  backgroundImage: "url('/card.png')",
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "cover",
+                }}
+                className="cursor-pointer rounded-xl h-96 p-4 w-60 flex flex-col items-center justify-between gap-3"
               >
                 <div className="flex w-full items-center justify-between">
-                  <h1 className="text-white text-xl font-bold"># {item.id}</h1>
-                  <h1 className="text-white text-xl font-bold">{item.name}</h1>
+                  <h1 className="text-[#0f224a] text-xl font-bold">
+                    # {item.id}
+                  </h1>
+                  <h1 className="text-[#0f224a] text-xl font-bold">
+                    {item.name}
+                  </h1>
                 </div>
                 <div
                   className="w-40 h-40 flex items-center justify-center"
@@ -127,11 +136,13 @@ export default async function Home() {
                     height={150}
                   />
                 </div>
-                <div className="text-white text-xl font-bold">
-                  XP {item.base_experience}
-                </div>
-                <div className="text-[#0f224a] text-xl">
-                  <b>${item.price}</b>
+                <div className="flex flex-col gap-4 text-center">
+                  <div className="text-[#0f224a] text-xl font-bold">
+                    XP {item.base_experience}
+                  </div>
+                  <div className="text-[#0f224a] text-4xl">
+                    <b>${item.price}</b>
+                  </div>
                 </div>
               </li>
             );
