@@ -8,7 +8,7 @@ Features:
 - Add balance
 - Request withdrawal
 
-![Website Desktop Next JS](./images/desktop.png)
+![Website Desktop Next JS](./images/desktop-v1.png)
 
 #### Start project frontend
 
